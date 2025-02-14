@@ -1,0 +1,32 @@
+﻿<Window x:Class="laba1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Checkers" WindowState="Maximized" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="A.jpg"/>
+    </Window.Background>
+    <Grid Height="2269" Width="2602">
+        <MediaElement Name="BackgroundMusic"
+              LoadedBehavior="Manual"
+              UnloadedBehavior="Manual"
+              Volume="0.02"
+              Source="Игорь Вихорьков - Ты ш_юха не моя.mp3"
+              MediaEnded="BackgroundMusic_MediaEnded"
+              Visibility="Collapsed"/>
+        <TextBlock x:Name="TurnIndicator"
+                   Text="Ход белых"
+                   FontSize="28"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Foreground="White"
+                   Panel.ZIndex="10" />
+        <Grid x:Name="BoardGrid" HorizontalAlignment="Left" VerticalAlignment="Top"
+              Width="800" Height="800" ShowGridLines="False" Margin="95,194,0,0">
+            <Grid.RenderTransform>
+                <ScaleTransform ScaleX="1" ScaleY="1"/>
+            </Grid.RenderTransform>
+        </Grid>
+        <Button Content="Выход" HorizontalAlignment="Left" Margin="245,39,0,0" VerticalAlignment="Top" Click="Button_Click" Height="124" RenderTransformOrigin="0.58,0.518" Width="179" Background="Black" Foreground="White" FontSize="36"/>
+        <Button Content="Заново" HorizontalAlignment="Left" Margin="554,39,0,0" VerticalAlignment="Top" Click="ResetGameButton_Click" Height="124" RenderTransformOrigin="0.58,0.518" Width="179" Background="Black" Foreground="White" FontSize="36"/>
+    </Grid>
+</Window>

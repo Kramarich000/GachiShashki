@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="A.jpg" />
+    <None Remove="oh-yes-sir.mp3" />
+    <None Remove="Игорь Вихорьков - Ты ш_юха не моя.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Игорь Вихорьков - Ты ш_юха не моя.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="A.jpg" />
+    <Content Include="oh-yes-sir.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
